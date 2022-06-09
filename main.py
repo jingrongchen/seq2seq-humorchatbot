@@ -27,7 +27,7 @@ def initial_setup(data_corpus):
 
 
 if __name__ == "__main__":
-    data_corpus = "twitter"
+    data_corpus = "reddit"
 
     #data preprocessing
     metadata, trainX, trainY, testX, testY, validX, validY = initial_setup(data_corpus)
