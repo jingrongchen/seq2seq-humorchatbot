@@ -16,3 +16,6 @@ model.npz
 env/
 venv/
 .idea/
+data/reddit/idx_q.npy
+data/reddit/idx_a.npy
+data/reddit/metadata.pkl
