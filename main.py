@@ -58,7 +58,7 @@ if __name__ == "__main__":
 
     src_vocab_size = tgt_vocab_size = src_vocab_size + 2
 
-    num_epochs = 5
+    num_epochs = 10
     vocabulary_size = src_vocab_size
     
 
@@ -75,12 +75,12 @@ if __name__ == "__main__":
             sentence = sentence + [w]
         return sentence
 
-    decoder_seq_length = 20
+    decoder_seq_length = 156
     model_ = Seq2seq(
         decoder_seq_length = decoder_seq_length,
         cell_enc=tf.keras.layers.GRUCell,
         cell_dec=tf.keras.layers.GRUCell,
-        n_layer=3,
+        n_layer=4,
         n_units=256,
         embedding_layer=tl.layers.Embedding(vocabulary_size=vocabulary_size, embedding_size=emb_dim),
         )

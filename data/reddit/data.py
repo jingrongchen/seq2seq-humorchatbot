@@ -4,14 +4,14 @@ EN_BLACKLIST = '!"#$%&\'()*+,-./:;<=>?@[\\]^_`{|}~\''
 FILENAME = '../reddit_en.txt'
 
 limit = {
-        'maxq' : 20,
-        'minq' : 0,
-        'maxa' : 20,
-        'mina' : 3
+        'maxq' : 156,
+        'minq' : 1,
+        'maxa' : 156,
+        'mina' : 1
         }
 
 UNK = 'unk'
-VOCAB_SIZE = 6000
+VOCAB_SIZE = 15700
 
 import random
 import sys
