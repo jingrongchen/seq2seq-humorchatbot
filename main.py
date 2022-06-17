@@ -94,8 +94,7 @@ if __name__ == "__main__":
     optimizer = tf.optimizers.Adam(learning_rate=0.001)
     model_.train()
 
-    seeds = ["happy birthday have a nice day",
-                 "donald trump won last nights presidential debate according to snap online polls"]
+
     for epoch in range(num_epochs):
         model_.train()
         trainX, trainY = shuffle(trainX, trainY, random_state=0)
@@ -127,9 +126,53 @@ if __name__ == "__main__":
         # printing average loss after every epoch
         print('Epoch [{}/{}]: loss {:.4f}'.format(epoch + 1, num_epochs, total_loss / n_iter))
 
+
+        seeds = [
+                    "Why will a Tesla scandal be exciting?",
+                 "I’m sorry” and “I apologize” mean the same thing...",
+                 "Knock - Knock Who's there?",
+                 "Did you hear about the new German microwave?",
+                 "Where do robo-babies come from?",
+                 "What did the doe say when it left the forest?",
+                 "What did the indian child say to his mother before he left for school?",
+                 "Why was the electrochemical cell arrested?",
+                 "What kind of soda did moses drink?",
+                 "What do you call a dead composer?",
+                 "I hate people who make cancer jokes.",
+                 "main difference between /news/ mods and north korea?",
+                 "How do you foil a plan?",
+                 "Did you hear about the french cheese factory explosion?",
+                 "My boss is going to fire the employee with the worst posture.",
+                 "My addiction to computer gaming started when my family bought a PC in the 90's...",
+                 "Why didn't Darwin cut off his beard?",
+                 "Why did the horse feel famous on reddit?",
+                 "Where do pirates store their files?",
+                 "What did they say about the atheist seminary?",
+                 "What did the capitalist uncle say to his soviet nephew?",
+                 "How can you tell the gender of a chromosome?",
+                 "How does reddit feel about civil war jokes?",
+                 "A German taught me how to crack eggs today.",
+                 "Why did the man on LSD cross the road?",
+                 "What do you get for a nun who wears men's clothes and likes outdated electronics?",
+                 "What does a skeleton orders at a restaurant?",
+                 "Plastics I recently gave up plastic straws and plastics in general.",
+                 "What do you call a group of friends who happen to be Muslims?",
+                 "The snow in the UK is pretty bad right now So I thought I’d check on my elderly 85 year old neighbour Valerie to see if she needed anything from the shops.",
+                 "Why does jesus jaywalk?",
+                 "Why i un-installed league of legends.",
+                 "Why did princess leia cry at the end of return of the jedi?",
+                 "Find a girl who's a good driver.",
+                 "Why did the cat cross the road?",
+                 "The other night me and my girlfriend had an argument..",
+                 "Fruit by the foot, but no meat by the meter?",
+                 "/r/jokes Must be full of insecure men...",
+                 "What happens when two same pokemons meet eachother?",
+                 "Know why Trump supporters are so obsessed with cuck?",
+                 "What has a bottom at its top?"]
+
         for seed in seeds:
             print("Query >", seed)
-            top_n = 3
+            top_n = 1
             for i in range(top_n):
                 sentence = inference(seed, top_n)
                 print(" >", ' '.join(sentence))
