@@ -58,7 +58,7 @@ if __name__ == "__main__":
 
     src_vocab_size = tgt_vocab_size = src_vocab_size + 2
 
-    num_epochs = 10000
+    num_epochs = 1
     vocabulary_size = src_vocab_size
     
 
